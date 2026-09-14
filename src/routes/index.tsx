@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Globe2, Landmark, Users } from "lucide-react";
-import crest from "@/assets/school-crest.png.asset.json";
+import crest from "@/assets/hk.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -30,7 +30,7 @@ function HomePage() {
           <p className="mt-8 max-w-2xl text-base leading-8 text-primary-foreground/72">Reporting on Hong Kong, economic life and a changing world through observation, research and discussion.</p>
           <Link to="/implementation" className="mt-9 inline-flex items-center gap-3 border-b border-accent pb-2 text-sm font-semibold text-primary-foreground">Discover our approach <ArrowRight className="size-4" /></Link>
         </div>
-        <div className="crest-stage"><img src={crest.url} alt="SKH Lam Woo Memorial Secondary School crest" className="w-full object-contain" /></div>
+        <div className="crest-stage"><img src={crest} alt="SKH Lam Woo Memorial Secondary School crest" className="w-full object-contain" /></div>
         <div className="harbour-rule" aria-hidden="true" />
       </div>
     </section>

@@ -1,7 +1,7 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import crest from "@/assets/school-crest.png.asset.json";
+import crest from "@/assets/lw_logo.png";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
@@ -25,7 +25,7 @@ export function SiteShell() {
       <header className="site-header">
         <div className="site-container flex h-20 items-center justify-between gap-5">
           <Link to="/" className="flex min-w-0 items-center gap-3" aria-label="CES home">
-            <img src={crest.url} alt="SKH Lam Woo Memorial Secondary School crest" className="h-14 w-14 shrink-0 object-contain" />
+            <img src={crest} alt="SKH Lam Woo Memorial Secondary School crest" className="h-14 w-14 shrink-0 object-contain" />
             <span className="hidden min-w-0 sm:block">
               <span className="block truncate font-display text-sm font-bold text-primary">公民、經濟與社會科</span>
               <span className="block truncate text-[10px] font-semibold uppercase text-muted-foreground">Citizenship, Economics & Society</span>
@@ -55,7 +55,7 @@ export function SiteShell() {
       <main><Outlet /></main>
       <footer className="border-t-4 border-primary bg-background text-foreground">
         <div className="site-container grid gap-10 py-12 md:grid-cols-[1.5fr_1fr]">
-          <div><p className="font-display text-xl font-bold">公民、經濟與社會科</p><p className="mt-2 max-w-xl text-sm text-primary-foreground/70">Citizenship, Economics and Society · SKH Lam Woo Memorial Secondary School</p></div>
+          <div><p className="font-display text-xl font-bold">Citizenship, Economics & Society<br />公民、經濟與社會科 </p><p className="mt-2 max-w-xl text-sm text-primary-foreground/70">Citizenship, Economics and Society · SKH Lam Woo Memorial Secondary School</p></div>
           <div className="md:text-right"><p className="text-xs font-semibold uppercase text-muted-foreground">Department desk · 科組專頁</p><Link to="/implementation" className="mt-3 inline-flex border-b border-foreground pb-1 text-sm font-semibold">Explore our curriculum</Link></div>
         </div>
       </footer>

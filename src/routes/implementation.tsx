@@ -1,9 +1,80 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BookMarked, Film, Lightbulb, Newspaper } from "lucide-react";
-export const Route=createFileRoute("/implementation")({head:()=>({meta:[{title:"Learning Approach | CES at SKH Lam Woo"},{name:"description",content:"How CES connects classroom knowledge with research, media and fieldwork."},{property:"og:title",content:"Learning Approach | CES at SKH Lam Woo"},{property:"og:description",content:"Classroom knowledge applied through research, media and project work."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:ImplementationPage});
-const methods=["Case studies","Data reading","Discussion","Fieldwork","Research","Presentation"];
-function ImplementationPage(){return <div className="page-space"><div className="site-container"><header className="page-intro"><p className="section-kicker">From knowing to doing · 知行合一</p><h1 className="page-title">Implementation</h1><p className="page-deck">We follow a philosophy that emphasises not only knowledge acquisition but also its meaningful application in real-world contexts.</p></header>
-<section className="mt-16 grid gap-px bg-border border border-border md:grid-cols-3"><article className="practice-card"><Newspaper/><span>Student research</span><p>Contributing project work to the school’s scholarly magazines.</p></article><article className="practice-card"><Film/><span>Public knowledge</span><p>Creating and distributing informative videos on NGO platforms.</p></article><article className="practice-card"><BookMarked/><span>Recognised work</span><p>Earning external accolades through ability, initiative and dedication.</p></article></section>
-<section className="editorial-section grid gap-12 md:grid-cols-[.7fr_1.3fr]"><div><p className="section-kicker">In practice</p><h2 className="section-title mt-5">From notes to publication.</h2></div><div className="prose-copy"><p>Students extend classroom learning through research and project work published in school magazines. Each piece develops from source reading and evidence gathering to editing and presentation.</p><p>They also produce short informational videos for community organisations. Awards and external recognition arising from this work are recorded in the Awards section.</p></div></section>
-</div><section className="bg-secondary"><div className="site-container py-20 md:py-28"><p className="section-kicker">Learning methods · 學習方法</p><div className="mt-8 grid gap-12 md:grid-cols-[.8fr_1.2fr]"><h2 className="section-title">A newsroom approach to learning.</h2><div className="prose-copy"><p>Lessons begin with a question, a current example or a set of data. Students compare sources, identify key information and organise findings before sharing their conclusions in writing, discussion or visual media.</p></div></div><div className="mt-14 flex flex-wrap gap-2">{methods.map(v=><span className="value-chip" key={v}>{v}</span>)}</div></div></section>
-<section className="site-container py-20 md:py-28"><div className="grid gap-12 md:grid-cols-[.65fr_1.35fr]"><div><Lightbulb className="size-8 text-accent"/><p className="section-kicker mt-6">Curriculum focus</p><h2 className="section-title mt-5">Observe. Verify. Explain.</h2></div><div className="prose-copy"><p>Students examine contemporary topics from more than one perspective and distinguish evidence from opinion. They learn to read charts, compare reports and explain economic and social patterns.</p><p>Individual reflection and group discussion help students test their ideas. Written and visual assignments place equal emphasis on accurate information, clear structure and appropriate source attribution.</p><p>Field studies connect classroom concepts with Hong Kong’s neighbourhoods, institutions and public spaces. Students record observations and develop them into concise reports.</p></div></div></section></div>}
+import crest from "@/assets/hk5.jpg";
+import implementation2 from "@/assets/implementation/veg3.png";
+import implementation1 from "@/assets/implementation/veg4.png";
+import implementation3 from "@/assets/implementation/vege-1.png";
+import implementation4 from "@/assets/implementation/vegepic-2.png";
+
+export const Route = createFileRoute("/implementation")({
+  head: () => ({
+    meta: [
+      { title: "Learning Approach | CES at SKH Lam Woo" },
+      { name: "description", content: "How CES connects classroom knowledge with research, media and fieldwork." },
+      { property: "og:title", content: "Learning Approach | CES at SKH Lam Woo" },
+      { property: "og:description", content: "Classroom knowledge applied through research, media and project work." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: ImplementationPage,
+});
+
+const implementationGallery = [
+  { src: implementation1, span: "md:col-span-2" },
+  { src: implementation2, span: "" },
+  { src: implementation3, span: "" },
+  { src: implementation4, span: "md:col-span-2" },
+];
+
+function ImplementationPage() {
+  return (
+    <div className="page-space">
+      <div className="site-container">
+        <section className="overflow-hidden rounded-[2rem]">
+          <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="flex flex-col justify-center p-6 md:p-10">
+              <div className="page-intro">
+                <p className="section-kicker">From knowing to doing · 知行合一</p>
+                <h1 className="page-title max-w-[12ch] text-[clamp(2.5rem,5vw,4.2rem)]">Implementations</h1>
+                <p className="page-deck text-[1rem] leading-7">
+                  We follow a philosophy that emphasises not only knowledge acquisition but also its meaningful application in real-world contexts.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center p-6 md:p-10">
+              <div className="crest-stage crest-stage-right max-w-[320px]">
+                <img src={crest} alt="School crest" className="w-full object-contain" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-16 overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm">
+          <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="flex flex-col justify-center p-6 md:p-10">
+              <p className="section-kicker">In practice</p>
+              <h2 className="mt-5 font-display text-2xl font-bold md:text-4xl">From notes to publication.</h2>
+              <p className="mt-6 text-sm leading-7 text-muted-foreground">
+                We actively promote and foster an environment in which students are not only imbibers of information but also its propagators. Our students have consistently contributed their research and project work to school’s scholarly magazines as evidence of this philosophy in action. Furthermore, they have taken the initiative to create and distribute informative videos on various NGO platforms that reflect their acquired knowledge. This section details the external accolades and awards that our students have earned as a result of their abilities and dedication.
+              </p>
+            </div>
+            <div className="grid gap-4 p-4 md:grid-cols-2 md:p-6">
+              {implementationGallery.map((item, index) => (
+                <div
+                  key={`${item.src}-${index}`}
+                  className={`overflow-hidden rounded-[1.5rem] border border-border bg-muted ${item.span}`}
+                >
+                  <img
+                    src={item.src}
+                    alt={`Implementation showcase ${index + 1}`}
+                    className={`w-full object-cover ${item.span ? "h-[220px] md:h-[300px]" : "h-[260px] md:h-[360px]"}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
