@@ -1,6 +1,7 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import bgImage from "@/assets/hk.jpg";
 import crest from "@/assets/lw_logo.png";
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +16,16 @@ const navigation = [
 export function SiteShell() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div
+      className="min-h-screen bg-background text-foreground"
+      style={{
+        backgroundImage: "linear-gradient(rgba(248, 244, 235, 0.8), rgba(248, 244, 235, 0.82)), url('" + bgImage + "')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="edition-strip">
         <div className="site-container flex items-center justify-between gap-4 py-2">
           <span>校園專題 · SCHOOL EDITION</span>
