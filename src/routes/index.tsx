@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Globe2, Landmark, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import crest from "@/assets/hk.jpg";
 
 export const Route = createFileRoute("/")({
@@ -11,13 +11,6 @@ export const Route = createFileRoute("/")({
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ]}), component: HomePage,
 });
-
-const pillars = [
-  { icon: Users, number: "01", title: "Personal & Social Development", zh: "個人及社會發展" },
-  { icon: Landmark, number: "02", title: "Hong Kong & Our Country", zh: "香港與國家" },
-  { icon: BookOpen, number: "03", title: "Economic Activities", zh: "經濟活動" },
-  { icon: Globe2, number: "04", title: "Global Issues", zh: "全球議題" },
-];
 
 function HomePage() {
   return <>
@@ -40,10 +33,6 @@ function HomePage() {
         <div><p className="section-kicker">Our subject · 本科簡介</p><h2 className="section-title mt-5">Read the city. Study the world.</h2></div>
         <div className="bilingual-copy"><p>Citizenship, Economics and Society introduces personal and social development, Hong Kong, economic activities and global issues. Through contemporary case studies, students practise enquiry, analysis and clear communication.</p><p className="font-cjk">公民、經濟與社會科涵蓋個人及社會發展、香港、經濟活動及全球議題。學生透過當代個案研習，培養探究、分析及清晰表達的能力。</p></div>
       </div>
-    </section>
-
-    <section className="border-y border-border bg-secondary">
-      <div className="site-container py-16 md:py-20"><p className="section-kicker">Four lenses · 四個視野</p><div className="mt-10 grid border-l border-t border-border sm:grid-cols-2 lg:grid-cols-4">{pillars.map(({icon: Icon,...p}) => <article key={p.number} className="pillar"><div className="flex items-center justify-between"><span className="editorial-number">{p.number}</span><Icon className="size-5 text-accent" /></div><h3 className="mt-12 font-display text-xl font-bold leading-snug">{p.title}</h3><p className="mt-3 font-cjk text-sm text-muted-foreground">{p.zh}</p></article>)}</div></div>
     </section>
 
     <section className="site-container grid gap-8 py-20 md:grid-cols-2 md:py-28">
