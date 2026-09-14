@@ -8,7 +8,7 @@ Build a polished bilingual subject website for Citizenship, Economics and Societ
 - **Panel Members:** Five named teachers, with Ms. Tsang identified as Panel Head and each represented by an original anime-inspired abstract symbol.
 - **Excursions:** Five photo-ready editorial entries with clear image placeholders, titles, dates, and short descriptions that can be replaced later.
 - **Awards:** A clean honours display with editable sample entries.
-- **Implementation:** A structured view of curriculum themes, enquiry skills, values, and learning approach.
+- **Implementation:** Present the supplied philosophy on applying knowledge, student contributions to scholarly magazines and NGO videos, plus external accolades. Include a dedicated Purposes section covering the school ethos and the supplied Curriculum Emphasis text about truth, leadership, zeal, wisdom, modesty, empathy, originality, optimism, and responsibility.
 
 ## Design direction
 - Victoria Harbour palette: warm white, harbour navy, teal, and signal red.
