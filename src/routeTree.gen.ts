@@ -10,33 +10,80 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as ExcursionsRouteImport } from './routes/excursions'
+import { Route as ImplementationRouteImport } from './routes/implementation'
+import { Route as PanelMembersRouteImport } from './routes/panel-members'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExcursionsRoute = ExcursionsRouteImport.update({
+  id: '/excursions',
+  path: '/excursions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImplementationRoute = ImplementationRouteImport.update({
+  id: '/implementation',
+  path: '/implementation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PanelMembersRoute = PanelMembersRouteImport.update({
+  id: '/panel-members',
+  path: '/panel-members',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
+  '/excursions': typeof ExcursionsRoute
+  '/implementation': typeof ImplementationRoute
+  '/panel-members': typeof PanelMembersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
+  '/excursions': typeof ExcursionsRoute
+  '/implementation': typeof ImplementationRoute
+  '/panel-members': typeof PanelMembersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
+  '/excursions': typeof ExcursionsRoute
+  '/implementation': typeof ImplementationRoute
+  '/panel-members': typeof PanelMembersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/awards' | '/excursions' | '/implementation' | '/panel-members'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/awards' | '/excursions' | '/implementation' | '/panel-members'
+  id:
+    | '__root__'
+    | '/'
+    | '/awards'
+    | '/excursions'
+    | '/implementation'
+    | '/panel-members'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AwardsRoute: typeof AwardsRoute
+  ExcursionsRoute: typeof ExcursionsRoute
+  ImplementationRoute: typeof ImplementationRoute
+  PanelMembersRoute: typeof PanelMembersRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +95,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/excursions': {
+      id: '/excursions'
+      path: '/excursions'
+      fullPath: '/excursions'
+      preLoaderRoute: typeof ExcursionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/implementation': {
+      id: '/implementation'
+      path: '/implementation'
+      fullPath: '/implementation'
+      preLoaderRoute: typeof ImplementationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/panel-members': {
+      id: '/panel-members'
+      path: '/panel-members'
+      fullPath: '/panel-members'
+      preLoaderRoute: typeof PanelMembersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AwardsRoute: AwardsRoute,
+  ExcursionsRoute: ExcursionsRoute,
+  ImplementationRoute: ImplementationRoute,
+  PanelMembersRoute: PanelMembersRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
