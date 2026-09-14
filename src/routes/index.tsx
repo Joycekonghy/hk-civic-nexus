@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
     { title: "Citizenship, Economics & Society | SKH Lam Woo" },
     { name: "description", content: "Explore Citizenship, Economics and Society at SKH Lam Woo Memorial Secondary School." },
     { property: "og:title", content: "Citizenship, Economics & Society | SKH Lam Woo" },
-    { property: "og:description", content: "A bilingual learning community for informed and responsible citizens." },
+    { property: "og:description", content: "A bilingual subject journal covering society, economics and contemporary issues." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ]}), component: HomePage,
 });
@@ -24,10 +24,10 @@ function HomePage() {
     <section className="hero-band">
       <div className="site-container relative grid min-h-[650px] items-center gap-12 py-16 md:grid-cols-[1.45fr_.55fr] md:py-24">
         <div>
-          <p className="section-kicker text-accent">SKH Lam Woo Memorial Secondary School</p>
+          <p className="section-kicker text-accent">The CES Journal · 公經社科報</p>
           <h1 className="mt-7 max-w-4xl font-display text-5xl font-bold leading-[1.08] text-primary-foreground sm:text-6xl lg:text-7xl">Citizenship,<br/><span className="text-highlight">Economics</span> & Society</h1>
           <p className="mt-6 font-cjk text-2xl font-semibold text-primary-foreground/85 sm:text-3xl">公民、經濟與社會科</p>
-          <p className="mt-8 max-w-2xl text-base leading-8 text-primary-foreground/72">Equipping students to understand our city, our country and our changing world — and to participate with insight, empathy and responsibility.</p>
+          <p className="mt-8 max-w-2xl text-base leading-8 text-primary-foreground/72">Reporting on Hong Kong, economic life and a changing world through observation, research and discussion.</p>
           <Link to="/implementation" className="mt-9 inline-flex items-center gap-3 border-b border-accent pb-2 text-sm font-semibold text-primary-foreground">Discover our approach <ArrowRight className="size-4" /></Link>
         </div>
         <div className="crest-stage"><img src={crest.url} alt="SKH Lam Woo Memorial Secondary School crest" className="w-full object-contain" /></div>
@@ -37,8 +37,8 @@ function HomePage() {
 
     <section className="site-container py-20 md:py-28">
       <div className="grid gap-10 md:grid-cols-[.7fr_1.3fr]">
-        <div><p className="section-kicker">Our subject · 本科簡介</p><h2 className="section-title mt-5">Learning to read the world.</h2></div>
-        <div className="bilingual-copy"><p>Citizenship, Economics and Society equips students with knowledge and understanding of personal and social development, Hong Kong and our country, economic activities, and global issues. Through the study of contemporary issues, students develop thinking and enquiry skills, as well as positive values and attitudes, preparing them to become informed and responsible citizens.</p><p className="font-cjk">公民、經濟與社會科讓學生認識個人及社會發展、香港與國家、經濟活動及全球議題。透過探討不同的當代議題，課程培養學生的思考及探究能力，以及正面的價值觀和態度，幫助他們成為有識見和負責任的公民。</p></div>
+        <div><p className="section-kicker">Our subject · 本科簡介</p><h2 className="section-title mt-5">Read the city. Study the world.</h2></div>
+        <div className="bilingual-copy"><p>Citizenship, Economics and Society introduces personal and social development, Hong Kong, economic activities and global issues. Through contemporary case studies, students practise enquiry, analysis and clear communication.</p><p className="font-cjk">公民、經濟與社會科涵蓋個人及社會發展、香港、經濟活動及全球議題。學生透過當代個案研習，培養探究、分析及清晰表達的能力。</p></div>
       </div>
     </section>
 
