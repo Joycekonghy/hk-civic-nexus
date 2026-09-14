@@ -6,3 +6,4 @@
 - [x] Add the five panel members with original abstract anime-inspired symbols.
 - [x] Use and present the uploaded school crest.
 - [x] Verify every route and mobile/desktop layout.
+- [x] Shift the presentation to a Hong Kong newspaper editorial and remove motto or sensitive wording.

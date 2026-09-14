@@ -1,5 +1,5 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import { ArrowUpRight, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import crest from "@/assets/school-crest.png.asset.json";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,12 @@ export function SiteShell() {
   const [open, setOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <div className="edition-strip">
+        <div className="site-container flex items-center justify-between gap-4 py-2">
+          <span>校園專題 · SCHOOL EDITION</span>
+          <span>HONG KONG · 香港</span>
+        </div>
+      </div>
       <header className="site-header">
         <div className="site-container flex h-20 items-center justify-between gap-5">
           <Link to="/" className="flex min-w-0 items-center gap-3" aria-label="CES home">
@@ -47,10 +53,10 @@ export function SiteShell() {
         )}
       </header>
       <main><Outlet /></main>
-      <footer className="border-t border-primary bg-primary text-primary-foreground">
+      <footer className="border-t-4 border-primary bg-background text-foreground">
         <div className="site-container grid gap-10 py-12 md:grid-cols-[1.5fr_1fr]">
           <div><p className="font-display text-xl font-bold">公民、經濟與社會科</p><p className="mt-2 max-w-xl text-sm text-primary-foreground/70">Citizenship, Economics and Society · SKH Lam Woo Memorial Secondary School</p></div>
-          <div className="md:text-right"><p className="text-xs uppercase text-primary-foreground/60">The truth will set you free</p><Link to="/implementation" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold">Explore our curriculum <ArrowUpRight className="size-4" /></Link></div>
+          <div className="md:text-right"><p className="text-xs font-semibold uppercase text-muted-foreground">Department desk · 科組專頁</p><Link to="/implementation" className="mt-3 inline-flex border-b border-foreground pb-1 text-sm font-semibold">Explore our curriculum</Link></div>
         </div>
       </footer>
     </div>
